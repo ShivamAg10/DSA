@@ -17,3 +17,16 @@ class Solution:
             summ += max(0, pot - height[i])
 
         return summ
+
+class Solution:
+    def trap(self, height):
+        Trapped_Water = 0
+        for i in range(1, len(height)-1):
+            left_max = max(height[:i])
+            right_max = max(height[i+1:])
+            minimum = min(left_max, right_max)
+            area = minimum - height[i]
+            if area > 0:
+                Trapped_Water += area
+        return Trapped_Water
+# Time Limit Exceeded
