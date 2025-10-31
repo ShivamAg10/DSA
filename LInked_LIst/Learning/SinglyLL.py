@@ -20,7 +20,7 @@ Node3.next = Node4
 ## Traversing a List
 curr = Node1
 while curr:
-    # print(curr)
+    print(curr)
     curr = curr.next
 
 ## Displaying Linked List
@@ -30,7 +30,7 @@ def display(Node):
     while curr:
         elements.append(str(curr.value))
         curr = curr.next 
-    print(' -> '.join(elements), '-> None')
+    # print(' -> '.join(elements), '-> None')
 # display(Node1)
 
 ## Search From Node Value
